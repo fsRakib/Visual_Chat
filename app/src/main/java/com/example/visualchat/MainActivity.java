@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         userIdEditText=findViewById(R.id.user_id_edit_text);
         startBtn=findViewById(R.id.start_btn);
-
 
         startBtn.setOnClickListener((v)->{
             String userId= userIdEditText.getText().toString().trim();
