@@ -18,8 +18,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
+        android:textStyle="bold"
+        android:fontFamily="@font/my_custom_font"
         android:textColor="@color/white"
-        android:textSize="32sp"/>
+        android:textSize="50sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +38,7 @@
         android:layout_marginHorizontal="40dp"
         android:hint="Uder ID"
         android:backgroundTint="@color/white"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/gray"
         android:paddingHorizontal="12dp"
         android:layout_marginTop="40dp"
         android:id="@+id/user_id_edit_text"

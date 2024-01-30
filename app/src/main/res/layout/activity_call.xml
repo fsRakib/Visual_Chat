@@ -26,7 +26,9 @@
         android:text="Let's start a call"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -43,7 +45,7 @@
             android:background="@drawable/rounded_corner"
             android:backgroundTint="@color/white"
             android:hint="Uder ID"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/gray"
             android:paddingHorizontal="12dp" />
 
         <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
