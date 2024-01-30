@@ -3,6 +3,7 @@ package com.example.visualchat;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Application;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         userIdEditText=findViewById(R.id.user_id_edit_text);
         startBtn=findViewById(R.id.start_btn);
 
+
         startBtn.setOnClickListener((v)->{
             String userId= userIdEditText.getText().toString().trim();
             if(userId.isEmpty()){
@@ -29,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
             }
             //start the service
             startService(userId);
+            Intent intent=new Intent(MainActivity.this,CallActivity.class);
+            intent.putExtra("userID",userId);
+            startActivity(intent);
         });
 
     }
@@ -36,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         Application application = getApplication(); // Android's application context
         long appID = 1336299220;   // yourAppID
         String appSign ="492302b35a6a2ba48af2c30da02eb605fff90879952bcac760f9ce22fc0e5a6a";  // yourAppSign
-         // yourUserID, userID should only contain numbers, English characters, and '_'.
         String userName =userID;   // yourUserName
 
         ZegoUIKitPrebuiltCallInvitationConfig callInvitationConfig = new ZegoUIKitPrebuiltCallInvitationConfig();
